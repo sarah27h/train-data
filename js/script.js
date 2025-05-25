@@ -7,7 +7,7 @@ const copyrightYear = document.getElementById('js-update-year');
 */
 const theCurrentDate = new Date();
 const theCurrentYear = theCurrentDate.getFullYear();
-copyrightYear.textContent = theCurrentYear;
+// copyrightYear.textContent = theCurrentYear;
 
 
 // **** scroll to top functionality
@@ -98,3 +98,21 @@ window.addEventListener('scroll', () => {
   })
 
 });
+
+
+// coloring navbar background if user scroll down and 
+// transparent at scroll to page top
+const navBar = document.querySelector('.js-c-navbar');
+const navBarToggler = document.querySelector('.js-c-navbar-toggler');
+
+  window.addEventListener('scroll', () => {
+    
+    if (window.scrollY > 100) {
+        navBar.classList.add('c-navbar__colored');
+        navBar.classList.remove('c-navbar__transparent');
+    } else {
+      navBar.classList.remove('c-navbar__colored');
+      navBar.classList.add('c-navbar__transparent');
+    }
+
+  });

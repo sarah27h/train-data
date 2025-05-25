@@ -1,4 +1,83 @@
-/* base colors */
+/***** 
+  *****
+  Typography styles
+  *****
+*****/
+/* josefin-sans-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/josefin-sans-v32-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* josefin-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/josefin-sans-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* josefin-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/josefin-sans-v32-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+}
+
+.heading-1 {
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+.heading-3 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.heading-4 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.heading-5 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+p, .heading-6 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.label {
+  font-size: 0.8rem;
+}
+
+/***** 
+  *****
+  CSS custom properties
+  *****
+*****/
 :root {
   /* custom colors */
   --p-50: #F9EAED;
@@ -6,6 +85,7 @@
   --p-400: #892233;
   --n-0: #FFF;
   --n-20: #F5F5F6;
+  --n-900: #0C0616;
   --text-color-0: #fff;
   --text-color-900: #0C0616;
 
@@ -14,7 +94,11 @@
   --fw-bold: 600;
 }
 
-/* general styles */
+/***** 
+  *****
+  General styles
+  *****
+*****/
 html,body {
   height:100%;
 }
@@ -127,28 +211,116 @@ a:focus, a:hover {
   text-decoration: none;
 }
 
-/* google fonts */
-/* josefin-sans-300 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/josefin-sans-v32-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+/***** 
+  *****
+  navbar
+  *****
+*****/
+/* override bootstrap with custom class begin with c- */
+.c-navbar {
+  color: var(--text-color-0); /* Ensure white text */
 }
-/* josefin-sans-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/josefin-sans-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+
+.c-navbar__colored {
+  background: var(--n-900-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
-/* josefin-sans-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/josefin-sans-v32-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+
+.c-navbar__transparent {
+  background: transparent;
+  box-shadow: none;
+}
+
+.c-navbar__nav {
+  padding: 1rem 0px;
+}
+
+.c-nav__link {
+  text-transform: uppercase;;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+  font-size: .9rem;
+  font-weight: var(--fw-light);
+}
+
+.c-nav__link:focus, 
+.c-nav__link:hover {
+  text-decoration: none;
+  color: var(--p-100);
+  font-weight: var(--fw-regular);
+}
+
+/* To override bootstrap styles for active state increase Specificity */
+.c-navbar__nav .c-nav__link.active {
+  text-decoration: underline;
+  color: var(--p-100);
+  font-weight: var(--fw-regular);
+}
+
+
+.c-navbar__toggler-icon::before {
+  vertical-align: middle;
+}
+
+.c-navbar__toggler:focus {
+  box-shadow: 0 0 0 0.1rem var(--p-300);
+}
+
+.c-navbar .c-navbar__nav .c-btn--primary {
+  padding: 0.5rem 1rem; /* override btn padding in navbar using class Specificity */
+}
+
+/***** 
+  *****
+  hero styles
+  *****
+*****/
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: var(--text-color-0);
+  padding-bottom: 0;
+}
+
+.hero__img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  z-index: -1000;
+}
+
+.hero__content {
+  padding: 8rem 0;
+}
+
+.hero__heading {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+.hero__text {
+  margin-bottom: 1.5rem;
+  font-weight:400;
+  color: var(--n-20);
+}
+
+
+
+/***** 
+  *****
+  media queries
+  *****
+*****/
+@media screen and (max-width: 991px) {
+    .c-navbar {
+        background: var(--n-900);
+        height: auto;
+    }
 }
