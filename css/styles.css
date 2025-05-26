@@ -307,7 +307,6 @@ a:focus, a:hover {
 
 .hero__text {
   margin-bottom: 1.5rem;
-  font-weight:400;
   color: var(--n-20);
 }
 
