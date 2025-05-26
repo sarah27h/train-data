@@ -85,7 +85,7 @@ p, .heading-6 {
   --p-400: #892233;
   --n-0: #FFF;
   --n-20: #F5F5F6;
-  --n-900: #0C0616;
+  --n-900: #20090c;
   --text-color-0: #fff;
   --text-color-900: #0C0616;
 
@@ -130,16 +130,20 @@ h2, h3, h4, h5, h6,
   font-weight: var(--fw-regular);
 }
 
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
 .label {
   font-size: .75rem;
 }
 
 .section {
-  padding: 5.5rem 0;
+  padding: 6rem 0;
 }
 
 .section__heading {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .section__text {
@@ -211,6 +215,22 @@ a:focus, a:hover {
   text-decoration: none;
 }
 
+.icon {
+  display: flex;
+  border-radius: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon--primary {
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  background: var(--p-400);
+  color: var(--n-0);
+}
+
 /***** 
   *****
   navbar
@@ -222,7 +242,7 @@ a:focus, a:hover {
 }
 
 .c-navbar__colored {
-  background: var(--n-900-color);
+  background: var(--n-900);
   box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
@@ -310,7 +330,44 @@ a:focus, a:hover {
   color: var(--n-20);
 }
 
+/***** 
+  *****
+  about styles
+  *****
+*****/
+.about {
+  background: var(--n-0);
+}
 
+/***** 
+  *****
+  benefits styles
+  *****
+*****/
+.benefits {
+  background: var(--p-50);
+  text-align: center;
+}
+.benefits__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits__item-heading {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem
+}
+
+/***** 
+  *****
+  data styles
+  *****
+*****/
+.data {
+  background: var(--n-0);
+}
 
 /***** 
   *****
