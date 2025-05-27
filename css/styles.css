@@ -221,14 +221,20 @@ a:focus, a:hover {
   position: relative;
   justify-content: center;
   align-items: center;
-}
-
-.icon--primary {
   width: 48px;
   height: 48px;
   font-size: 1.5rem;
+}
+
+.icon--primary {
   background: var(--p-400);
   color: var(--n-0);
+}
+
+.icon--secondary {
+  background: var(--n-0);
+  border: 2px solid var(--p-400);
+  color: var(--p-300);
 }
 
 /***** 
@@ -288,6 +294,42 @@ a:focus, a:hover {
 
 .c-navbar .c-navbar__nav .c-btn--primary {
   padding: 0.5rem 1rem; /* override btn padding in navbar using class Specificity */
+}
+
+/***** 
+  *****
+  card styles
+  *****
+*****/
+.c-card {
+  border: 2px solid var(--p-50);
+}
+
+.c-card--secondary {
+  background: var(--n-20);
+  border: 2px solid var(--p-400);
+}
+
+.c-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  background: var(--p-50);
+}
+
+.c-card-heading {
+  margin-bottom: 0;
+}
+
+.c-card-list-item {
+  background: transparent;
+  padding: 1rem 0;
+}
+
+.c-card-icon {
+  position: absolute;
+  top: -36px;
 }
 
 /***** 
@@ -367,6 +409,16 @@ a:focus, a:hover {
 *****/
 .data {
   background: var(--n-0);
+}
+
+/***** 
+  *****
+  vm prices styles
+  *****
+*****/
+.vm-prices {
+  background: var(--n-20);
+  text-align: center;
 }
 
 /***** 
