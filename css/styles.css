@@ -537,6 +537,16 @@ a:focus, a:hover {
         height: auto;
     }
 
+    .prices, 
+    .infraprices {
+      padding-bottom: 6.5rem;
+    }
+
+    .infraprices,
+    .footer  {
+      padding-top: 6.5rem;
+    }
+
     .prices__action,
     .contact__info  {
       position: static;
