@@ -444,6 +444,89 @@ a:focus, a:hover {
 
 /***** 
   *****
+  contact styles
+  *****
+*****/
+.contact {
+  background: var(--p-50);
+  position: relative;
+}
+
+.contact__item {
+  width: 312px;
+  padding: 3rem 1.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--p-300);
+  color: var(--text-color-0);
+  margin-left: .5rem;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.contact__icon {
+  font-size: 1.5rem;
+}
+
+.contact__info {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -150px;
+}
+
+
+/***** 
+  *****
+  footer styles
+  *****
+*****/
+.footer {
+  padding-top: 14rem;
+  padding-bottom: 0;
+}
+
+.footer__heading {
+  color: var(--p-400);
+  margin-bottom: 1.5rem;
+}
+
+.footer__links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+  font-weight: var(--fw-light);
+  text-transform: capitalize;
+}
+
+.footer__link {
+  text-decoration: none;
+}
+
+
+.footer__link:hover {
+  text-decoration: none;
+  color: var(--p-300);
+}
+
+.footer__sub {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--p-300)
+}
+
+.footer__icons:hover i {
+  color: var(--accent-hover-color);
+}
+
+.footer__seperator {
+  margin: 0 .5rem;
+}
+
+/***** 
+  *****
   media queries
   *****
 *****/
