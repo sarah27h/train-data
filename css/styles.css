@@ -420,6 +420,7 @@ a:focus, a:hover {
   background: var(--n-20);
   text-align: center;
   position: relative;
+  padding-bottom: 11.5rem;
 }
 
 .prices__action {
@@ -429,6 +430,11 @@ a:focus, a:hover {
   position: absolute;
   bottom: -126px;
   z-index: 1000;
+  text-align: left;
+}
+
+.prices__action p {
+  margin-bottom: 2rem;
 }
 
 .infraprices {
