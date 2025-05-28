@@ -430,7 +430,8 @@ a:focus, a:hover {
   position: absolute;
   bottom: -126px;
   z-index: 1000;
-  text-align: left;
+  left: 0;
+  right: 0;
 }
 
 .prices__action p {
@@ -534,5 +535,11 @@ a:focus, a:hover {
     .c-navbar {
         background: var(--n-900);
         height: auto;
+    }
+
+    .prices__action,
+    .contact__info  {
+      position: static;
+      margin-top: 2rem;
     }
 }
