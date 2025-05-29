@@ -505,6 +505,7 @@ a:focus, a:hover {
 
 .footer__link {
   text-decoration: none;
+  font-weight: var(--fw-light);
 }
 
 
