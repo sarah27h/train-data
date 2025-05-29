@@ -7,7 +7,7 @@ const copyrightYear = document.getElementById('js-update-year');
 */
 const theCurrentDate = new Date();
 const theCurrentYear = theCurrentDate.getFullYear();
-// copyrightYear.textContent = theCurrentYear;
+copyrightYear.textContent = theCurrentYear;
 
 
 // **** scroll to top functionality
